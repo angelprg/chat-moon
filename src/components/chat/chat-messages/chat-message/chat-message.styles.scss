@@ -1,0 +1,56 @@
+@import "../../../../main.styles.scss";
+
+.msg-box {
+  width: 70%;
+  color: $dark-gray;
+  border-radius: 11px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.11);
+  border: solid 0.5px $light-gray;
+  padding: 10px;
+  margin-bottom: 10px;
+
+
+  .msg-header {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    align-items: center;
+
+    .msg-from {
+      color: $electric-blue;
+      font-weight: bold;
+    }
+
+    .msg-timestamp {
+      color: gray;
+      font-weight: lighter;
+      font-size: (0.6rem);
+      margin: 0 10px;
+    }
+
+    .msg-text {
+      font-size: 14px;
+    }
+  }
+
+  &.msg-me {
+    margin-left: auto;
+    background-color: $background-msg-me;
+
+    .msg-header {
+      flex-direction: row-reverse;
+
+    }
+  }
+
+  &.msg-admin {
+    background-color: $powderBlue;
+    color: white;
+    text-align: center;
+    width: 95%;
+  }
+
+
+}

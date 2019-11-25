@@ -7,9 +7,13 @@ import Chat from "../chat/chat.component";
 //console.log(ip.address());
 
 const App = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("Angel");
 
-  return username === "" ? <ChatConfig setUsername={setUsername} /> : <Chat />;
+  return username === "" ? (
+    <ChatConfig setUsername={setUsername} />
+  ) : (
+    <Chat username={username} />
+  );
 };
 
 export default App;
