@@ -1,7 +1,23 @@
 @import "../../main.styles.scss";
 
 #chat {
+  justify-content: center;
+  align-items: center;
   display: flex;
   height: 100%;
+  width: 100%;
   flex-direction: column;
+  background-color: $white;
+
+  @media screen and (min-width: $break-tablet) {
+    height: 90%;
+    width: 75%;
+  }
+
+  @media screen and (min-width: $break-desktop) {
+    height: 90%;
+    max-height: 750px;
+    width: 750px;
+  }
+
 }

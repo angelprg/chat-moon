@@ -23,12 +23,13 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(webpackMid(webpack(webpackConfig)));
 
 // Sockets
-io.on("connection", socket => {
-  console.log("socket connected", socket.id);
 
+// Al ingresar se muestra mensaje de bienvenida al usuario y aviso al resto
+io.on("connection", socket => {
   socket.on("join", (username, callback) => {
     const res = users.addUser(socket.id, username);
     if (res.error) callback(res.error);
+
     const timestamp = new Date().toLocaleTimeString().slice(0, -3);
 
     socket.emit("message", {
@@ -44,14 +45,12 @@ io.on("connection", socket => {
       timestamp,
       type: "admin"
     });
-
     callback();
   });
 
+  // Envío de mensajes entre usuarios
   socket.on("userMessage", (msg, callback) => {
     const user = users.getUser(socket.id);
-    console.log("userMessage");
-    console.log(user);
     io.emit("message", {
       from: user.username,
       text: msg,
@@ -60,11 +59,17 @@ io.on("connection", socket => {
     callback();
   });
 
+  // Al salir también se envía notificación al resto de los usuarios.
   socket.on("leave", () => {
-    users.removeUser(socket.id);
-  });
-  socket.on("disconnect", () => {
-    console.log("User left");
+    const user = users.getUser(socket.id);
+    if (user) {
+      io.emit("message", {
+        from: "Admin",
+        text: `${user.username} abandonó el chat`,
+        timestamp: new Date().toLocaleTimeString().slice(0, -3)
+      });
+      users.removeUser(socket.id);
+    }
   });
 });
 

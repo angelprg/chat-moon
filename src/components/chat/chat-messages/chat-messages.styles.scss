@@ -1,6 +1,8 @@
 @import "../../../main.styles.scss";
 
-#messages-box {
+.messages-box {
+  width: 100%;
   padding: 24px;
-  flex-grow: 1;
+  overflow: auto;
+  flex: auto;
 }

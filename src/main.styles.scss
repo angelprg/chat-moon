@@ -35,9 +35,19 @@ sans-serif;
   padding: 10px;
 }
 
+/* TAMAÑOS MEDIA QUERY */
+$break-small: 320px;
+$break-tablet: 768px;
+$break-desktop: 1024px;
+$break-large: 1200px;
+
 
 /* ESTILOS GENERALES */
 body {
   font-family: $main-font;
   margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
