@@ -20,7 +20,7 @@ const ChatConfig = ({ setUsername }) => {
   return (
     <div className="chat-config">
       <h2>CHAT</h2>
-      <SVG src={LogoMoons} class="logo" />
+      <SVG src={LogoMoons} className="logo" />
       <input
         type="text"
         placeholder="Nombre de usuario"

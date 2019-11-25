@@ -7,12 +7,12 @@ import Chat from "../chat/chat.component";
 //console.log(ip.address());
 
 const App = () => {
-  const [username, setUsername] = useState("Angel");
+  const [username, setUsername] = useState("");
 
   return username === "" ? (
     <ChatConfig setUsername={setUsername} />
   ) : (
-    <Chat username={username} />
+    <Chat username={username} setUsername={setUsername} />
   );
 };
 
