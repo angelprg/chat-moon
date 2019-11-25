@@ -10,7 +10,10 @@ Chat web.
     - Webpack
     - Sass
 # Instrucciones de uso
-## Desde consola ejecutar lo siguiente:
+## Requerimientos
+  - Node
+  - Git
+## Desde consola ejecutar lo siguiente :
   - $ git clone https://github.com/angelprg/chat-moons.git
   - $ cd chat-moon
   - $ npm install
