@@ -11,7 +11,7 @@ Chat web.
     - Sass
 # Instrucciones de uso
 ## Desde consola ejecutar lo siguiente:
-  - $ git clone https://github.com/angelprg/chat-moon.git
+  - $ git clone https://github.com/angelprg/chat-moons.git
   - $ cd chat-moon
   - $ npm install
   - $ node .
