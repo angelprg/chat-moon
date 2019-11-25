@@ -1,0 +1,53 @@
+/* VARIABLES GENERALES */
+
+/* COLORES */
+$light-blue: #96bbf0;
+$lavander: #cabaf1;
+$electric-blue: #0752f8;
+$powderBlue: #a5bbf5;
+$white: #FFF;
+$dark-gray: #252525;
+$light-gray: lightgray;
+$background-msg-me: #c5e0f5;
+
+/* FUENTES */
+$main-font: CircularStd,
+Arial,
+Helvetica,
+sans-serif;
+
+/* MIXINS */
+@mixin action-button {
+  color: $white;
+  background-color: $electric-blue;
+  border-radius: 12pt;
+  border-width: 0;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@mixin text-input {
+  color: $dark-gray;
+  background-color: $white;
+  border: 2px solid $powderBlue;
+  border-radius: 12pt;
+  padding: 10px;
+}
+
+/* TAMAÑOS MEDIA QUERY */
+$break-small: 320px;
+$break-tablet: 768px;
+$break-desktop: 1024px;
+$break-large: 1200px;
+
+
+/* ESTILOS GENERALES */
+body {
+  font-family: $main-font;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

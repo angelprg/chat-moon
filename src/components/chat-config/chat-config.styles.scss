@@ -1,0 +1,41 @@
+@import "../../main.styles.scss";
+
+.chat-config {
+  background: linear-gradient(180deg, $light-blue 0%, $lavander 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  h2 {
+    color: $dark-gray;
+    font-weight: lighter;
+    letter-spacing: 2px;
+  }
+
+  .logo {
+    width: 185px;
+    margin-bottom: 55px;
+  }
+
+  input {
+    @include text-input;
+    width: 50%;
+    min-width: 225px;
+    max-width: 350px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  button {
+    @include action-button;
+    width: 25%;
+    margin: 20px 0;
+    min-width: 125px;
+    max-width: 200px;
+  }
+
+}

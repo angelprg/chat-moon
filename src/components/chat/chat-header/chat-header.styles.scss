@@ -1,0 +1,27 @@
+@import "../../../main.styles.scss";
+
+#chat-header {
+  width: 100%;
+  background-image: linear-gradient(to right, #96bbf0, #cabaf1);
+  padding: 10px 23px 10px 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+
+  .moons-icon {
+    width: 32px;
+  }
+
+  .username {
+    color: $white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin: auto auto auto 18px;
+  }
+
+  .settings-icon {
+    width: 16px;
+  }
+}

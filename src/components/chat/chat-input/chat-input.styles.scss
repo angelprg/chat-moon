@@ -1,0 +1,19 @@
+@import "../../../main.styles.scss";
+
+#chat-input {
+  width: 100%;
+  display: flex;
+  padding: 16px;
+
+  .chat-input {
+    @include text-input;
+    width: 100%;
+    margin: 0 8px;
+
+
+  }
+
+  .chat-send {
+    @include action-button;
+  }
+}
