@@ -24,6 +24,7 @@ Chat web.
   
 # TODO:
   - Revisar liberación de nombres de usuario cuando se cierra pestaña/navegador, o se recarga ventana.
+  - Integrar pruebas unitarias.
   - Mostrar listado de usuarios conectados.
   - Funcionalidad para mostrar Emojis.
   - Limitar el tamaño del registro de mensajes.
